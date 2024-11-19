@@ -1,64 +1,133 @@
+<!--Lesson Goals: 
+Copy Code From w3 Schools
+Add Flexbox to get items on same line
+Play with justify-content
+Comment Out Code Command + / 
+-->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Challenge: The boxer model</title>
+    <title>Unit 4 - Flexbox</title>
     <style>
-      .book-container{
-        background-color: beige;
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+      .main {
+/*         background-color: black; */
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        flex-wrap: wrap;
       }
-      .book-item{
-        background-color: turquoise;
-        width: 200px;
-        height: 400px;
-      }
-      
       
       
     </style>
   </head>
   <body>
-    <h1>Cozy Reads</h1>
-
-    <div class="book-container">
+    <h1>Jungle Animals</h1>
+    
+    <div class= "main">
       
-   
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654581271i/61242426.jpg"
-        width="200"
-        class="book-container"
-      />
-      <p class= "book-item">
-        It’s not easy to build a coffee shop in a place that has never had
-        coffee before. #CozyFantasy
-      </p>
- </div>
-  
-   <div class= "book-container">
-     
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://thumbs.dreamstime.com/b/jaguar-peering-jungle-foliage-amazon-rainforest-close-up-photograph-its-golden-eyes-piercing-green-animals-323957087.jpg"
+            alt="Avatar"
+            style="width: 300px; height: 300px"
+          />
+        </div></div>
+
+        <div class="flip-card-back">
+          <h1>Makhi Crosland</h1>
+
+          <p>Architect and Engineer</p>
+
+          <p>We love that guy</p>
+        </div>
+      </div>
     
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1569514209i/45047384.jpg"
-      width="200"
-     
-    />
-    <p class= "book-item">
-      The main character must oversee an inspection of a house for magical
-      children. #CozyFantasy
-    </p>
-</div> 
     
-    <div class= "book-container">
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1601307658i/53310061.jpg"
-      width="200"
-    />
-    <p class= "book-item">
-      Who better to help cover up an accidental murder than overly protective
-      aunties. #CozyMystery
-    </p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://thumbs.dreamstime.com/b/jaguar-peering-jungle-foliage-amazon-rainforest-close-up-photograph-its-golden-eyes-piercing-green-animals-323957087.jpg"
+            alt="Avatar"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+
+        <div class="flip-card-back">
+          <h1>Makhi Crosland</h1>
+
+          <p>Architect and Engineer</p>
+
+          <p>We love that guy</p>
+        </div>
+      </div>
     </div>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://thumbs.dreamstime.com/b/jaguar-peering-jungle-foliage-amazon-rainforest-close-up-photograph-its-golden-eyes-piercing-green-animals-323957087.jpg"
+            alt="Avatar"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+
+        <div class="flip-card-back">
+          <h1>Makhi Crosland</h1>
+
+          <p>Architect and Engineer</p>
+
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+    
+    
   </body>
 </html>
